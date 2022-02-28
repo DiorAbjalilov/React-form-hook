@@ -21,7 +21,6 @@ code {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -154,4 +153,32 @@ fieldset {
 
 :-ms-input-placeholder {
   color: #888;
+}
+.errorMessage {
+  color: red;
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+.error {
+  border-bottom: 1px solid red !important;
+  animation-name: inputAnim;
+  animation-duration: 0.45s;
+}
+@keyframes inputAnim {
+  0% {
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-3%);
+  }
+  50% {
+    transform: translateX(3%);
+  }
+  75% {
+    transform: translateX(-3%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
